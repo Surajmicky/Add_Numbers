@@ -2,9 +2,10 @@ import React from 'react'
 import { JsonViewer } from '@textea/json-viewer'
 import styled from 'styled-components'
 const Output = ({output}) => {
+  let ouputlength=Object.keys(output).length;
   return (
     <Container>
-        <JsonViewer name={false} theme="dark" value={output}/>
+      {ouputlength>0 && <JsonViewer rootName={false} displayDataTypes={false} displayObjectSize={false} theme="dark" value={output}/>}
     </Container>
   )
 }
