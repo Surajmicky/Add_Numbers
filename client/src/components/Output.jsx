@@ -1,18 +1,15 @@
 import React from 'react'
-import JSONView from 'react-json-view';
+import { JsonViewer } from '@textea/json-viewer'
 import styled from 'styled-components'
 const Output = ({output}) => {
- console.log(output);
- let keys=Object.keys(output);
- 
   return (
     <Container>
-        <JSONView name={false} displayObjectSize= {false} displayDataTypes={false} theme="monokai" src={output}/>
+        <JsonViewer name={false} theme="dark" value={output}/>
     </Container>
   )
 }
 const Container = styled.div`
-background-color:#272822;
+background-color:#181818;
 height:30vh;
 color:red;
 align-self:center;
